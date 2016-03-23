@@ -1,4 +1,4 @@
-function [mat_v] = fnCubicInterpolate(v_points, mat_x)
+function [v_v] = fnCubicInterpolate(v_points, mat_x)
 %% Based off of code from 
 %% 	http://www.paulinternet.nl/?page=bicubic
 %%	http://paulbourke.net/miscellaneous/interpolation/
@@ -21,8 +21,6 @@ function [mat_v] = fnCubicInterpolate(v_points, mat_x)
 
 		v_v(i_inc) = f_v;
 
-	end
-
-	mat_v = reshape(v_v, size(mat_x,1), size(mat_x,2));
+    end
 
 end

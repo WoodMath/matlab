@@ -1,4 +1,4 @@
-function [mat_v] = fnTriCubicInterpolate(mat_points, mat_xyz)
+function [v_v] = fnTriCubicInterpolate(mat_points, mat_xyz)
 %% Based off of code from 
 %% 	http://www.paulinternet.nl/?page=bicubic
 %%	http://paulbourke.net/miscellaneous/interpolation/
@@ -24,8 +24,6 @@ function [mat_v] = fnTriCubicInterpolate(mat_points, mat_xyz)
 		v_arr(3) = fnBiCubicInterpolate(permute(mat_points(3,:,:), [2,3,1]), f_y, f_z);
 		
 		v_v(i_inc) = fnCubicInterpolate(v_arr, f_x);
-	end
-
-	mat_v = reshape(v_v, size(mat_x,1), size(mat_x,2));
+    end
 
 end

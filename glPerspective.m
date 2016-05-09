@@ -13,4 +13,10 @@ m_Projection = ...
      0, 2*f_Near/(f_Top - f_Bottom), (f_Top + f_Bottom) / (f_Top - f_Bottom), 0; ...
      0, 0, -(f_Far + f_Near) / (f_Far - f_Near), -2*(f_Far * f_Near) / (f_Far - f_Near); ...
      0, 0, -1, 0];
-     
+
+ 
+ v_Coor=[0,0,3,1]';
+ 
+ v_result = m_Projection*v_Coor;
+ 
+ v_result = v_result/v_result(4)

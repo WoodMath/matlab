@@ -1,0 +1,6 @@
+function [mat_rotate_Y] = fnRotateY(iDegrees)
+	fRadians = iDegrees*pi/180;
+	mat_rotate_Y = [cos(fRadians), 0, -sin(fRadians); ...
+			0, 1, 0; ...
+			sin(fRadians), 0, cos(fRadians)];
+end

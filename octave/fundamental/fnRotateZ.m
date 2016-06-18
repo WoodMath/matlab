@@ -1,0 +1,6 @@
+function [mat_rotate_Z] = fnRotateZ(iDegrees)
+	fRadians = iDegrees*pi/180;
+	mat_rotate_Z = [cos(fRadians), sin(fRadians), 0; ...
+			-sin(fRadians), cos(fRadians), 0; ...
+			0, 0, 1];
+end

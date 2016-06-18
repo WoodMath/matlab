@@ -1,0 +1,6 @@
+function [mat_rotate_X] = fnRotateX(iDegrees)
+	fRadians = iDegrees*pi/180;
+	mat_rotate_X = [1, 0, 0; ...
+			0, cos(fRadians), -sin(fRadians); ...
+			0, sin(fRadians), cos(fRadians)];
+end
